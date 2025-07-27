@@ -1,0 +1,42 @@
+footer{ color: #fff; position: relative;
+    h3{font-size: 20px; color: #fff; font-weight: 600; margin-bottom: 10px;}
+    .footer-top{ padding: 50px 0;
+        background-color: #142B3C !important;
+        .links{list-style-type: none; margin: 0; padding: 0;
+            li{padding: 0 0 7px 0;
+                a{color: #b8bfc5; text-decoration: none;}
+            }
+        }
+        .address{ list-style-type: none; margin: 0; padding: 0;
+            li{padding: 0 0 10px 30px; position: relative; color: #b8bfc5;
+                i{position: absolute; left: 0; top: 5px;}
+                a{color: #b8bfc5; text-decoration: none;}
+            }
+        }
+    }
+
+    .footer-bottom{background: var(--primary); font-size: 15px; padding: 10px 0;
+        ul{list-style-type: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px;
+            li{
+                a{color: #fff; text-decoration: none;}
+            }
+        }
+    }
+}
+.whatsapp-chat {
+    position: absolute;
+    z-index: 2;
+    bottom: 40px;
+    right: 20px;
+    height: var(--s);
+    width: var(--s);
+    background: #25d366 var(--joinchat-ico) 50% / 60% no-repeat;
+    color: inherit;
+    border-radius: 50%;
+    box-shadow: 1px 6px 24px 0 rgba(7, 94, 84, .24);
+    cursor: pointer;
+    transition: background-color .2s linear;
+    img{
+        width: 60px;
+    }
+}
