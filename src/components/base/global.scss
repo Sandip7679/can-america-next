@@ -383,7 +383,7 @@ section {
 }
 
 .partner-us {
-  background: url(../../assets/testimonial-bg.jpg) no-repeat;
+  background: url(@/../../assets/testimonial-bg.jpg) no-repeat;
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
@@ -643,7 +643,7 @@ ul.lists {
 }
 
 .apply-sec {
-  background-image: url(../../assets/How-to_apply.jpg);
+  background-image: url(@/../../assets/How-to_apply.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -800,7 +800,7 @@ ul.lists {
 .flag{
       height: 15px; width: 20px;
     box-shadow: 0 0 1px 0 #888;
-    background-image: url(../../assets/flags.png);
+    background-image: url(@/../../assets/flags.png);
     background-repeat: no-repeat;
     background-color: #dbdbdb;
     background-position: 20px 0;
