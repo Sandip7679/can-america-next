@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 const HeaderBottom = ({ siteSetting }) => {
   const [scrolled, setScrolled] = useState(false);
+  const [immigrationServices, setImmigrationServices] = useState([]);
 
 
   // const dispatch = useDispatch();
@@ -55,14 +56,15 @@ const HeaderBottom = ({ siteSetting }) => {
 
   useEffect(() => {
     
-    let ImmigrationServices = fetch(`/api/categories`)
+    fetch(`/api/categories`)
       .then((res) => res.json())
       .then((data) => {
-        return data;
+        console.log("categories data", data);
+        setImmigrationServices(data);
       });
 
     // let ImmigrationServices = buildCategory(categories);
-    console.log("ImmigrationServices", ImmigrationServices);
+    console.log("ImmigrationServices", immigrationServices);
 
     const handleScroll = () => {
       if (window.scrollY > 100) {

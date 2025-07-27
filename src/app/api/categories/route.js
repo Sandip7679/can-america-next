@@ -7,21 +7,21 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   let categories = await Category.find({}).lean();
-    let res = buildCategoryTreeE(categories);
+    let res = buildCategoryTree(categories);
 
   return NextResponse.json(res);
 }
 
- function buildCategoryTreeE(flatArray) {
+ function buildCategoryTree(flatArray) {
     const idMap = {};
     const tree = [];
 
     flatArray.forEach((item) => {
-      idMap[item.id] = {...item, categories: [] };
+      idMap[item._id] = {...item, categories: [] };
     });
     flatArray.forEach((item) => {
-      const node = idMap[item.id];
-      if (item.parent_id === null || item.parent_id === undefined) {
+      const node = idMap[item._id];
+      if (!item.parent_id) {
         tree.push(node);
       } else {
         const parent = idMap[item.parent_id];

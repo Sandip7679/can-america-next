@@ -8,6 +8,7 @@ import SiteSetting from "@/models/SiteSetting";
 // import Banner from "@/models/Banner";
 // import Category from "@/models/Category";
 import Link from "next/link";
+import HeaderBottom from "./HeaderBottom";
 
 const Header = async () => {
   
@@ -86,6 +87,7 @@ const Header = async () => {
             </div>
           </div>
         </div>
+        <HeaderBottom/>
       </header>
     </>
   );
