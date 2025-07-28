@@ -9,22 +9,22 @@ import SiteSetting from "@/models/SiteSetting";
 // import Category from "@/models/Category";
 import Link from "next/link";
 import HeaderBottom from "./HeaderBottom";
+import StudyProgram from "@/models/StudyProgram";
 
 const Header = async () => {
   
 
   let db = await dbConnect();
 
-  const collections = await db.connection.db.listCollections().toArray();
-  console.log("collections..", collections);
+  // const collections = await db.connection.db.listCollections().toArray();
+  // console.log("collections..", collections);
 
   let siteSetting = await SiteSetting?.findOne({}).lean();
-  console.log("siteSetting", siteSetting);
+  let studyProgram = await StudyProgram?.findOne({}).lean();
+  // console.log("studyProgram", studyProgram);
 
   // let categories = await Category.find({}).lean();
   // console.log("categories", categories);
-
-
 
  
   // const getSlugFromType = (type) => {
@@ -87,7 +87,7 @@ const Header = async () => {
             </div>
           </div>
         </div>
-        <HeaderBottom/>
+        <HeaderBottom SiteSetting={JSON.stringify(siteSetting)}/>
       </header>
     </>
   );
