@@ -60,6 +60,7 @@ const HeaderBottom = ({SiteSetting}) => {
       .then((serviceData) => {
         // console.log("categories data", data);
         // setImmigrationServices(data);
+        console.log('serviceData', serviceData);
 
         setTemporaryResidence(
           serviceData["Temporary Residence"][0]["Temporary Residence"]
